@@ -13,5 +13,5 @@ func go_to(x):
 
 func movement():
 		if moveing == true:
-				movement = position.direction_to(destination) * speed
+				movement = position.direction_to(destination) * speed 
 				movement = move_and_slide(movement)
