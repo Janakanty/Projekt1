@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://src/player/player.gd" type="Script" id=1]
-[ext_resource path="res://src/story_boards/story_board_big.tscn" type="PackedScene" id=2]
 
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -24,9 +23,6 @@ smoothing_enabled = true
 smoothing_speed = 3.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
-
-[node name="story_board_big" parent="Camera2D/CanvasLayer" instance=ExtResource( 2 )]
-visible = false
 
 [node name="Sprite" type="Sprite" parent="."]
 
