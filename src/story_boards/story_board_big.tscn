@@ -55,10 +55,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1628.0
-margin_top = 929.0
-margin_right = 1868.0
-margin_bottom = 1020.0
+margin_left = 1615.0
+margin_top = 882.0
+margin_right = 1855.0
+margin_bottom = 973.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

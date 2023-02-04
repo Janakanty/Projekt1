@@ -19,3 +19,7 @@ func trigger_story_board():
 
 
 
+
+
+func _on_Node_tree_exiting():
+	pass # Replace with function body.

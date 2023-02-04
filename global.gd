@@ -10,3 +10,7 @@ var act:      int = 1
 var start:    bool = false
 var paragraf: int = 1
 
+#WSPOMAGACZE 
+
+func camera_control_start():
+	get_parent().get_node("main").camera_control_start()

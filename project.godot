@@ -12,6 +12,7 @@ config_version=4
 
 config/name="Projekt 1"
 run/main_scene="res://src/main/main.tscn"
+boot_splash/image="res://graphics/start/start.png"
 config/icon="res://icon.png"
 
 [autoload]

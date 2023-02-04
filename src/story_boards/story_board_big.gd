@@ -14,3 +14,5 @@ func _on_Button_pressed():
 		get_node("Node").trigger_story_board()
 
 
+func _on_start_board_tree_exited():
+		Global.camera_control_start()

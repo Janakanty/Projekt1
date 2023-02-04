@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://graphics/test.png" type="Texture" id=1]
 [ext_resource path="res://src/player/player.tscn" type="PackedScene" id=2]
@@ -8,8 +8,41 @@
 [ext_resource path="res://src/main/scenario.gd" type="Script" id=6]
 [ext_resource path="res://graphics/board/dirt.jpg" type="Texture" id=7]
 
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.0666667, 0.0627451, 0.0627451, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "stat"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1, 1.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0666667, 0.0627451, 0.0627451, 1 ), Color( 0.0666667, 0.0627451, 0.0627451, 1 ), Color( 0.145098, 0.121569, 0.121569, 0 ) ]
+}
+
 [node name="main" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="Tween" type="Tween" parent="."]
 
 [node name="Dirt" type="Sprite" parent="."]
 position = Vector2( 284, 412 )
@@ -33,9 +66,59 @@ script = ExtResource( 5 )
 position = Vector2( 699, 53 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 349, 224 )
+position = Vector2( 4, 0 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2( -1, -7 )
+scale = Vector2( -0.0527268, 4.17275 )
 current = true
+smoothing_enabled = true
+smoothing_speed = 3.0
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+[node name="CanvasLayer" type="CanvasLayer" parent="player/Camera2D"]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="player/Camera2D"]
+
+[node name="ColorRect" type="ColorRect" parent="player/Camera2D/CanvasLayer2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -984.0
+margin_top = -84.0
+margin_right = 966.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="player/Camera2D/CanvasLayer2/ColorRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -971.0
+margin_top = -1083.0
+margin_right = 979.0
+margin_bottom = -992.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -1956.0
+margin_top = -1937.0
+margin_right = 2899.0
+margin_bottom = 2513.0
+color = Color( 0.0666667, 0.0627451, 0.0627451, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/stat = SubResource( 2 )
