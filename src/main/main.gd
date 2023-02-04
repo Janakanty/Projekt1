@@ -1,6 +1,6 @@
 extends Node2D
 
-var start_board = preload("res://src/story_boards/story_board_small.tscn")
+var start_board = preload("res://src/story_boards/I/start_board.tscn")
 
 onready var player_canvas = get_node("player/Camera2D/CanvasLayer")
 

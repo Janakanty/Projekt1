@@ -36,26 +36,7 @@ tracks/0/keys = {
 [node name="story_board_small" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 198.0
-margin_top = 166.5
-margin_right = -198.0
-margin_bottom = -166.5
 script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="."]
-anchor_left = -0.128
-anchor_top = -0.22
-anchor_right = 1.128
-anchor_bottom = 1.21
-margin_left = 271.072
-margin_top = 56.84
-margin_right = -274.072
-margin_bottom = 12.6299
-texture = ExtResource( 1 )
-expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -64,9 +45,23 @@ __meta__ = {
 anims/RESET = SubResource( 1 )
 anims/invisible = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.056
+anchor_top = 0.1
+anchor_right = 0.948
+anchor_bottom = 0.994
+margin_left = 0.479996
+margin_right = -5.16016
+margin_bottom = 0.47998
+texture = ExtResource( 1 )
+expand = true
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-polygon = PoolVector2Array( 74, -102.5, 88, 918.5, -198, 918.5, -198, -176.5, 1728, -173.5, 1725, 915.5, 1434, 907.5, 1437, -111.5 )
+[node name="Button" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
