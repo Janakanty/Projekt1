@@ -5,7 +5,6 @@ func _on_Area2D_input_event(viewport, event, shape_idx):
 		if (event is InputEventMouseButton && event.pressed and Global.moveing == false and Global.story == false):
 				get_parent().get_parent().get_parent().get_node("player").go_to(position)
 				Global.moveing = true
-				
 
 
 func _on_Area2D_body_entered(body):

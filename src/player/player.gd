@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var destination = Vector2()
 var movement = Vector2()
-var speed = 40
+var speed = 80
 
 func _physics_process(delta):
 		movement()

@@ -2,7 +2,6 @@ extends Node2D
 
 var start_board = preload("res://src/story_boards/I/start_board.tscn")
 
-onready var player_canvas = get_node("player/Camera2D/CanvasLayer")
 
 func _input(event):
 		if(Input.is_action_just_pressed("quit")):
@@ -10,7 +9,6 @@ func _input(event):
 
 func _ready():
 		gameplay_provider()
-		$AnimationPlayer.play("start")
 		Global.story = true
 
 
@@ -25,9 +23,9 @@ func gameplay_provider():
 
 
 func start_game():
-		yield($AnimationPlayer, "animation_finished")
+		yield(get_tree().create_timer(2), "timeout")
 		var s_board = start_board.instance()
 		s_board.modulate.a = 0
-		player_canvas.add_child(s_board)
+		get_node("Camera2D/CanvasLayer").add_child(s_board)
 		Global.start == true
 		
