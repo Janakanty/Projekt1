@@ -1,22 +1,17 @@
 extends KinematicBody2D
 
-var velocity = Vector2() setget moving_animation
-var speed = 50
-var move = false
+var destination = Vector2()
+var movement = Vector2()
+var speed = 100
+var moveing = false
 
 func _physics_process(delta):
-		self.velocity = move_and_slide(velocity)
+		movement()
 
-func _ready():
-	pass # Replace with function body.
+func go_to(x):
+		destination = x
 
-func _unhandled_input(event):
-		get_input()
-
-
-func moving_animation(new_velocity):  #walk animation when - walk
-		velocity = new_velocity
-		if velocity != Vector2(0,0):
-				pass#$AnimatedSprite.play("moving")
-		else: 
-				pass#$AnimatedSprite.stop()
+func movement():
+		if moveing == true:
+				movement = position.direction_to(destination) * speed
+				movement = move_and_slide(movement)
