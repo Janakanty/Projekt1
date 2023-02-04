@@ -39,6 +39,7 @@ tracks/0/keys = {
 }
 
 [node name="main" type="Node2D"]
+modulate = Color( 1, 1, 1, 0 )
 script = ExtResource( 4 )
 
 [node name="Test" type="Sprite" parent="."]
