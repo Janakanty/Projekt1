@@ -28,6 +28,7 @@ func trigger_story_board():
 		elif slide == 6:
 			get_parent().get_node("slides").play("from5to6")
 			slide += 1
+			Global.music_in()
 		elif slide == 7:
 			slide += 1
 			get_parent().get_node("slides").play("from6to7")
@@ -64,3 +65,4 @@ func trigger_story_board():
 
 func _on_Node_tree_exited():
 	Global.camera_control_start_hause()
+	

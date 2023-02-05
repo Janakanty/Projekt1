@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://graphics/test.png" type="Texture" id=1]
 [ext_resource path="res://src/player/player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://src/story_buttons/theatre_button/theatre_button.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/story_buttons/fabric_button/fabric_button.tscn" type="PackedScene" id=12]
 [ext_resource path="res://music/scena 0.wav" type="AudioStream" id=13]
+[ext_resource path="res://music/ambient.wav" type="AudioStream" id=14]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -50,6 +51,8 @@ script = ExtResource( 4 )
 
 [node name="Tween" type="Tween" parent="."]
 
+[node name="MusicTween" type="Tween" parent="."]
+
 [node name="Dirt" type="Sprite" parent="."]
 position = Vector2( 422, 312 )
 scale = Vector2( 2.7197, 2.39838 )
@@ -70,25 +73,25 @@ script = ExtResource( 5 )
 position = Vector2( 1, -2 )
 
 [node name="fabric" parent="level/places" instance=ExtResource( 12 )]
-position = Vector2( -74, 446 )
+position = Vector2( 1044, -353 )
 
 [node name="grandma" parent="level/places" instance=ExtResource( 10 )]
-position = Vector2( 54, -350 )
+position = Vector2( 30, -83 )
 
 [node name="hause" parent="level/places" instance=ExtResource( 3 )]
 position = Vector2( 792, 479 )
 
 [node name="medium" parent="level/places" instance=ExtResource( 8 )]
-position = Vector2( -466, 411 )
+position = Vector2( -336, 422 )
 
 [node name="post" parent="level/places" instance=ExtResource( 9 )]
-position = Vector2( 533, -239 )
+position = Vector2( 555, -32 )
 
 [node name="theatre" parent="level/places" instance=ExtResource( 11 )]
-position = Vector2( -379, -220 )
+position = Vector2( -462, 85 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 530, 475 )
+position = Vector2( 534, 655 )
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2( 10, -2 )
@@ -145,6 +148,9 @@ __meta__ = {
 anims/RESET = SubResource( 1 )
 anims/stat = SubResource( 2 )
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="scena0" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 autoplay = true
+
+[node name="ambient" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
