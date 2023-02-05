@@ -55,12 +55,26 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 1615.0
-margin_top = 882.0
+margin_left = 1707.0
+margin_top = 830.0
 margin_right = 1855.0
 margin_bottom = 973.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 80.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_top = 993.0
+margin_right = 1920.0
+margin_bottom = 1073.0
+color = Color( 0, 0, 0, 1 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

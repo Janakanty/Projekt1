@@ -9,7 +9,7 @@ var casual_moveing: bool = false
 var act:      int = 1
 var start:    bool = false
 var paragraf: int = 1
-
+var zero = 0 
 #WSPOMAGACZE 
 
 func camera_control_start():
