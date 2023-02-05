@@ -42,7 +42,7 @@ func start_game():
 		Global.zero = 1
 
 func start_game_hause():
-		yield(get_tree().create_timer(4), "timeout")
+		yield(get_tree().create_timer(2), "timeout")
 		var s_board = start_boardII.instance()
 		s_board.modulate.a = 0
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
