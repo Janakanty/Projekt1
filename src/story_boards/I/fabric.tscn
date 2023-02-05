@@ -1,0 +1,463 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://fabric.gd" type="Script" id=1]
+[ext_resource path="res://src/story_boards/story_board_big.tscn" type="PackedScene" id=2]
+[ext_resource path="res://graphics/fabirc/Agatha_fab.png" type="Texture" id=3]
+[ext_resource path="res://graphics/fabirc/Wheeler.png" type="Texture" id=4]
+[ext_resource path="res://graphics/board/ramka_fin.png" type="Texture" id=5]
+[ext_resource path="res://fonts/LACK_20.tres" type="DynamicFont" id=6]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/TextureRect3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/TextureRect4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/TextureRect5:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/TextureRect6:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/TextureRect7:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/TextureRect2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/TextureRect8:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "from0to1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "from1to2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "from2to3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "from3to4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "from4to5"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "from5to6"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect7:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "from6to7"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "from7to8"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TextureRect8:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="fabric_board" instance=ExtResource( 2 )]
+
+[node name="Node" type="Node" parent="." index="0"]
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="." index="3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control" index="0"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -510.0
+margin_top = -12.0
+margin_right = -510.0
+margin_bottom = -12.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Control" index="1"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 402.0
+margin_top = 8.0
+margin_right = 402.0
+margin_bottom = 8.0
+texture = ExtResource( 3 )
+
+[node name="TextureRect3" type="TextureRect" parent="Control" index="2"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -234.0
+margin_top = 416.0
+margin_right = -1306.0
+margin_bottom = -187.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureRect3" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.305
+anchor_top = 0.14
+anchor_right = 0.639
+anchor_bottom = 0.421
+margin_left = 8.35999
+margin_top = 1.22
+margin_right = -7.87207
+margin_bottom = -5.81702
+custom_fonts/font = ExtResource( 6 )
+text = "Agatha, jak tam twoja kariera baletowa, nie widzieliśmy się chyba z dziesięć lat!"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect4" type="TextureRect" parent="Control" index="3"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -17.0
+margin_top = 561.0
+margin_right = -1089.0
+margin_bottom = -42.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureRect4" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.305
+anchor_top = 0.14
+anchor_right = 0.639
+anchor_bottom = 0.421
+margin_left = 1.35999
+margin_top = -3.78
+margin_right = -3.87207
+margin_bottom = -5.81702
+custom_fonts/font = ExtResource( 6 )
+text = "Kariera? Wielki kryzys wszystko zaprzepaścił. Ludzi nie stać na rozrywkę, trafiłam do prac publicznych."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect5" type="TextureRect" parent="Control" index="4"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -260.0
+margin_top = 695.0
+margin_right = -1332.0
+margin_bottom = 92.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureRect5" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.305
+anchor_top = 0.14
+anchor_right = 0.639
+anchor_bottom = 0.421
+margin_left = 8.35999
+margin_top = 1.22
+margin_right = -7.87207
+margin_bottom = -5.81702
+custom_fonts/font = ExtResource( 6 )
+text = "Ach, rozumiem… Nikomu nie jest łatwo…"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect6" type="TextureRect" parent="Control" index="5"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 28.0
+margin_top = 735.0
+margin_right = -1044.0
+margin_bottom = 132.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureRect6" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.305
+anchor_top = 0.14
+anchor_right = 0.639
+anchor_bottom = 0.421
+margin_left = 8.35999
+margin_top = -1.78
+margin_right = -7.87207
+margin_bottom = -0.817017
+custom_fonts/font = ExtResource( 6 )
+text = "To prawda. Panie Wheeler, czy mogłabym zajrzeć do dokumentów mojego wuja? Potrzebuję pewnej informacji."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect7" type="TextureRect" parent="Control" index="6"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 344.0
+margin_top = 785.0
+margin_right = -728.0
+margin_bottom = 182.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureRect7" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.305
+anchor_top = 0.14
+anchor_right = 0.639
+anchor_bottom = 0.421
+margin_left = 8.35999
+margin_top = 0.220001
+margin_right = -7.87207
+margin_bottom = -0.817017
+custom_fonts/font = ExtResource( 6 )
+text = "Oczywiście! Charles, wspaniały człowiek. Agatho, czuj się jak u siebie. Dokumenty leżą w archiwum."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect8" type="TextureRect" parent="Control" index="7"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 808.0
+margin_top = 579.0
+margin_right = 78.0
+margin_bottom = 255.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/TextureRect8" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.305
+anchor_top = 0.14
+anchor_right = 0.639
+anchor_bottom = 0.421
+margin_left = 8.35999
+margin_top = 1.22
+margin_right = -7.87207
+margin_bottom = -5.81702
+custom_fonts/font = ExtResource( 6 )
+text = "Wśród skoroszytów i dokumentów wyróżnia się zeszyt w oprawie ze skóry. Oprócz informacji o fabryce, znajduję tam krótkie zdanie: „Klucz zostawiłem za gablotą.”."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="slides" type="AnimationPlayer" parent="." index="7"]
+anims/RESET = SubResource( 2 )
+anims/from0to1 = SubResource( 1 )
+anims/from1to2 = SubResource( 3 )
+anims/from2to3 = SubResource( 4 )
+anims/from3to4 = SubResource( 5 )
+anims/from4to5 = SubResource( 6 )
+anims/from5to6 = SubResource( 7 )
+anims/from6to7 = SubResource( 8 )
+anims/from7to8 = SubResource( 9 )
+
+[connection signal="tree_exited" from="Node" to="Node" method="_on_Node_tree_exited"]

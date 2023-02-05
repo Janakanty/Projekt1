@@ -28,7 +28,6 @@ func trigger_story_board():
 		elif slide == 6:
 			get_parent().get_node("slides").play("from5to6")
 			slide += 1
-			Global.music_in()
 		elif slide == 7:
 			slide += 1
 			get_parent().get_node("slides").play("from6to7")

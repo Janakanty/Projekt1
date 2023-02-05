@@ -19,5 +19,14 @@ func camera_control_start():
 func camera_control_start_hause():
 	get_parent().get_node("main").camera_control_start_hause()
 	
+func camera_control_after_grand():
+	get_parent().get_node("main").camera_control_after_grand()
+
 func music_in():
 	get_parent().get_node("main").music_fade_in(get_parent().get_node("main").get_node("ambient"))
+	
+func grandpa_think():
+	get_parent().get_node("main").add_small_grandpa()
+
+func camera_control_after_end_act():
+	get_parent().get_node("main").add_small_end()

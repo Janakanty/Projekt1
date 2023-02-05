@@ -40,8 +40,42 @@ func trigger_story_board():
 		elif slide == 9:
 			slide += 1
 			get_parent().get_node("slides").play("from8to9")
+		#8
+		elif slide == 10:
+			slide += 1
+			get_parent().get_node("slides").play("from9to10")
+		#8
+		elif slide == 11:
+			slide += 1
+			get_parent().get_node("slides").play("from10to11")
+		#8
+		elif slide == 12:
+			slide += 1
+			get_parent().get_node("slides").play("from11to12")
+		#8
+		elif slide == 13:
+			slide += 1
+			get_parent().get_node("slides").play("from12to13")
+		#8
+		elif slide == 14:
+			slide += 1
+			get_parent().get_node("slides").play("from13to14")
+		#8
+		elif slide == 15:
+			slide += 1
+			get_parent().get_node("slides").play("from14to15")
+		#8
+		elif slide == 16:
+			slide += 1
+			get_parent().get_node("slides").play("from15to16")
+			#8
+		elif slide == 17:
+			slide += 1
+			get_parent().get_node("slides").play("from16to17")	
 		else:
 			end_board = true
+			Global.paragraf = 2
 
-func _on_Node_tree_exiting():
-		Global.camera_control_start()
+
+func _on_Node_tree_exited():
+		Global.grandpa_think()
