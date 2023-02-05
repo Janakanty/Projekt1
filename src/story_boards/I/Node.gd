@@ -6,7 +6,6 @@ var slide = 1
 func trigger_story_board():
 		#1
 		if slide == 1:
-			
 			slide += 1
 		#2 Ale nie wiedzieli
 		elif slide == 2:
@@ -19,9 +18,6 @@ func trigger_story_board():
 		#4
 		elif slide == 4:
 			end_board = true
-
-
-
 
 
 func _on_Node_tree_exiting():

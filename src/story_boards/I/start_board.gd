@@ -21,8 +21,5 @@ func trigger_story_board():
 			end_board = true
 
 
-
-
-
 func _on_Node_tree_exiting():
-	pass # Replace with function body.
+		Global.camera_control_start()

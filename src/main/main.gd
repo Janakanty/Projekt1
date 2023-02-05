@@ -46,6 +46,8 @@ func start_game_hause():
 		var s_board = start_boardII.instance()
 		s_board.modulate.a = 0
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
+		get_node("level/places/medium").active = true
+		get_node("level/places/grandma").active = true
 
 
 func camera_control_start():
@@ -58,14 +60,19 @@ func camera_control_start():
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/hause.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 
-func camera_control_paragraf1():
+func camera_control_start_hause():
 		var tween = get_node("Tween")
-		tween.interpolate_property($player/Camera2D, "global_position", $player.global_position, $level/places/story_button.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.interpolate_property($player/Camera2D, "global_position", $player.global_position, $level/places/grandma.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
 		yield(get_tree().create_timer(2), "timeout")
 		tween = get_node("Tween")
-		tween.interpolate_property($player/Camera2D, "global_position", $level/places/story_button.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.interpolate_property($player/Camera2D, "global_position", $level/places/grandma.global_position, $level/places/medium.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.start()
+		yield($Tween,"tween_completed")
+		yield(get_tree().create_timer(2), "timeout")
+		tween = get_node("Tween")
+		tween.interpolate_property($player/Camera2D, "global_position", $level/places/medium.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		
 func camera_control_paragraf21():

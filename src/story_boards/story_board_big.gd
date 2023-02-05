@@ -15,4 +15,4 @@ func _on_Button_pressed():
 
 
 func _on_start_board_tree_exited():
-		Global.camera_control_start()
+		pass

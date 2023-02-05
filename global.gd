@@ -14,3 +14,7 @@ var zero = 0
 
 func camera_control_start():
 	get_parent().get_node("main").camera_control_start()
+	
+func camera_control_start_hause():
+	get_parent().get_node("main").camera_control_start_hause()
+	
