@@ -13,6 +13,5 @@ func trigger_story_board():
 		else:
 				end_board = true
 
-
 func _on_Node_tree_exited():
 		Global.camera_control_start()
