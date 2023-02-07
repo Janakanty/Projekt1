@@ -1,0 +1,815 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://fonts/LACK_30.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/LACK_50.tres" type="DynamicFont" id=2]
+[ext_resource path="res://graphics/board/ramka_fin.png" type="Texture" id=3]
+[ext_resource path="res://src/story_boards/I/start_game/start_boardII.gd" type="Script" id=4]
+[ext_resource path="res://graphics/start/Agatha_mysli_2.png" type="Texture" id=5]
+[ext_resource path="res://graphics/start/Agatha_mysli_1.png" type="Texture" id=6]
+[ext_resource path="res://graphics/start/Vurbon.png" type="Texture" id=7]
+[ext_resource path="res://graphics/start/Agatha_podnosi_list.png" type="Texture" id=8]
+[ext_resource path="res://graphics/start/upuszczona_butelka.png" type="Texture" id=9]
+[ext_resource path="res://graphics/start/list.png" type="Texture" id=10]
+[ext_resource path="res://graphics/start/Agatha_Wchodzi.png" type="Texture" id=11]
+[ext_resource path="res://src/story_boards/story_board_big.tscn" type="PackedScene" id=12]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/lewy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/ramka:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/srodek1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/srodek2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/prawy:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/ramka2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control2/TextureRect:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control2/TextureRect2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Control2:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control3/TextureRect:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Control3/TextureRect3:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Control3/TextureRect2:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control3/TextureRect4:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control3/TextureRect5:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control3/TextureRect6:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "from0to1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/lewy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "from10to11"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "from11to12"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "from12to13"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "from13to14"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "from14to15"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "from15to16"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect6:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "from1to2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/ramka:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "from2to3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/srodek1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "from3to4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/srodek2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "from4to5"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/prawy:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "from5to6"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/ramka2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "from6to7"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "from7to8"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control2/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "from8to9"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control2/TextureRect2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "from9to10"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="start_boardII" instance=ExtResource( 12 )]
+
+[node name="Node" type="Node" parent="." index="0"]
+script = ExtResource( 4 )
+
+[node name="Control" type="Control" parent="." index="3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lewy" type="TextureRect" parent="Control" index="0"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -589.0
+margin_top = 63.0
+margin_right = -682.0
+margin_bottom = 11.0
+texture = ExtResource( 11 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="srodek1" type="TextureRect" parent="Control" index="1"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 395.0
+margin_top = -49.0
+margin_right = -192.0
+margin_bottom = -379.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="srodek2" type="TextureRect" parent="Control" index="2"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 617.0
+margin_top = 532.0
+margin_right = -381.0
+margin_bottom = -29.0
+texture = ExtResource( 9 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prawy" type="TextureRect" parent="Control" index="3"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 932.0
+margin_top = 64.0
+margin_right = 564.0
+margin_bottom = -142.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ramka" type="TextureRect" parent="Control" index="4"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -127.0
+margin_top = 818.0
+margin_right = -706.0
+margin_bottom = 83.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/ramka" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 435.0
+margin_top = 62.0
+margin_right = -506.0
+margin_bottom = -222.0
+custom_fonts/font = ExtResource( 2 )
+text = "Muszę się napić "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ramka2" type="TextureRect" parent="Control" index="5"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1039.0
+margin_top = 646.0
+margin_right = 460.0
+margin_bottom = -89.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/ramka2" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 435.0
+margin_top = 62.0
+margin_right = -506.0
+margin_bottom = -222.0
+custom_fonts/font = ExtResource( 2 )
+text = "A co to jest?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="." index="4"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control2" index="0"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -214.0
+margin_top = 94.0
+margin_right = -347.0
+margin_bottom = 19.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Control2" index="1"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 219.0
+margin_top = -154.0
+margin_right = 865.0
+margin_bottom = 1404.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control2/TextureRect2" index="0"]
+modulate = Color( 0.192157, 0.160784, 0.160784, 1 )
+anchor_left = 0.308
+anchor_top = 0.121
+anchor_right = 0.632
+anchor_bottom = 0.414
+margin_left = 24.6719
+margin_top = 30.802
+margin_right = -25.712
+margin_bottom = 7.86792
+custom_fonts/font = ExtResource( 1 )
+text = "Ukochany bracie,
+
+Mam nadzieje że ten list znajdzie Cie w dobrym zdrowiu oraz doskonałym stanie ducha. Piszę do Ciebie ponieważ nie wiem na ile starczy mi jeszcze sił. Najbliższe dni będą bardzo trudne i nie wiem jak długo będę z nim walczyć.
+
+Niedługo skończę trzydzieści pięć lat, wiesz co to dla mnie oznacza. To przekleństwo ciągnie się w nieskończoność. Mam do Ciebie ogromną prośbę, wiem że dbasz o Agathe jak o własną córkę ale muszę Cie poprosić o coś więcej. Proszę Cie przekaż jej klucz do naszej skrytki oraz opowiedz jej co ją czeka. Błagam  i przepraszam że zrzucam to straszne brzemię w prost na Twoje barki. 
+
+Twoja kochająca siostra Josephine"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control3" type="Control" parent="." index="5"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Control3" index="0"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -309.0
+margin_top = 73.0
+margin_right = -766.0
+margin_bottom = -184.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Control3" index="1"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 490.0
+margin_top = 162.0
+margin_right = -111.0
+margin_bottom = -176.0
+texture = ExtResource( 5 )
+expand = true
+
+[node name="TextureRect3" type="TextureRect" parent="Control3" index="2"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -261.0
+margin_top = 649.0
+margin_right = -917.0
+margin_bottom = 280.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Control3/TextureRect3" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.309
+anchor_top = 0.124
+anchor_right = 0.632
+anchor_bottom = 0.411
+margin_left = -0.576019
+margin_top = -0.164001
+margin_right = 0.151978
+margin_bottom = -0.221008
+custom_fonts/font = ExtResource( 1 )
+text = "Muszę to sprawdzić, w końcu chodzi o moją matkę."
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect4" type="TextureRect" parent="Control3" index="3"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 402.0
+margin_top = 638.0
+margin_right = -254.0
+margin_bottom = 269.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Control3/TextureRect4" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.306
+anchor_top = 0.105
+anchor_right = 0.641
+anchor_bottom = 0.433
+margin_left = 0.215973
+margin_top = 27.345
+margin_right = -0.22406
+margin_bottom = -20.863
+custom_fonts/font = ExtResource( 1 )
+text = "Ale od czego zacząć?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="TextureRect5" type="TextureRect" parent="Control3" index="4"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1044.0
+margin_top = 66.0
+margin_right = 388.0
+margin_bottom = -303.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control3/TextureRect5" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.302
+anchor_top = 0.124
+anchor_right = 0.628
+anchor_bottom = 0.399
+margin_left = 22.272
+margin_top = 14.836
+margin_right = 3.20795
+margin_bottom = 0.310974
+custom_fonts/font = ExtResource( 1 )
+text = "Moja babcia powinna coś wiedzieć. Ciekawe czy mieszka tam gdzie 10 lat temu?"
+autowrap = true
+
+[node name="TextureRect6" type="TextureRect" parent="Control3" index="5"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1059.0
+margin_top = 402.0
+margin_right = 403.0
+margin_bottom = 33.0
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control3/TextureRect6" index="0"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.304
+anchor_top = 0.12
+anchor_right = 0.645
+anchor_bottom = 0.418
+margin_left = 24.744
+margin_top = -0.32
+margin_right = -24.28
+margin_bottom = -0.197998
+custom_fonts/font = ExtResource( 1 )
+text = "Dziadek zawsze wiedział wszystko, szkoda że już nie żyje. Chyba że..."
+valign = 1
+autowrap = true
+
+[node name="slides" type="AnimationPlayer" parent="." index="7"]
+anims/RESET = SubResource( 2 )
+anims/from0to1 = SubResource( 1 )
+anims/from10to11 = SubResource( 12 )
+anims/from11to12 = SubResource( 13 )
+anims/from12to13 = SubResource( 14 )
+anims/from13to14 = SubResource( 15 )
+anims/from14to15 = SubResource( 16 )
+anims/from15to16 = SubResource( 17 )
+anims/from1to2 = SubResource( 3 )
+anims/from2to3 = SubResource( 4 )
+anims/from3to4 = SubResource( 5 )
+anims/from4to5 = SubResource( 6 )
+anims/from5to6 = SubResource( 7 )
+anims/from6to7 = SubResource( 8 )
+anims/from7to8 = SubResource( 9 )
+anims/from8to9 = SubResource( 10 )
+anims/from9to10 = SubResource( 11 )
+
+[connection signal="tree_exited" from="Node" to="Node" method="_on_Node_tree_exited"]

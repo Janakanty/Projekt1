@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/psycho medium.wav-f991317a2498a21d449da0a7c2485bd9.sample"
+
+[deps]
+
+source_file="res://sounds/psycho medium.wav"
+dest_files=[ "res://.import/psycho medium.wav-f991317a2498a21d449da0a7c2485bd9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://src/story_buttons/story_button.tscn" type="PackedScene" id=1]
-[ext_resource path="res://graphics/buttons/grandma.jpg" type="Texture" id=2]
+[ext_resource path="res://graphics/buttons/dom_babki.png" type="Texture" id=2]
 
 [node name="story_button" instance=ExtResource( 1 )]
 

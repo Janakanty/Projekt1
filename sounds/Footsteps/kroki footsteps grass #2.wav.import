@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kroki footsteps grass #2.wav-e5254a2524c8325a8b903ca5ab7948a3.sample"
+
+[deps]
+
+source_file="res://sounds/Footsteps/kroki footsteps grass #2.wav"
+dest_files=[ "res://.import/kroki footsteps grass #2.wav-e5254a2524c8325a8b903ca5ab7948a3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

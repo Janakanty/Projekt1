@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kroki A-Reverb.wav-8f42afe0ff42c7e47a380af7c2b0357b.sample"
+
+[deps]
+
+source_file="res://sounds/Footsteps/kroki A-Reverb.wav"
+dest_files=[ "res://.import/kroki A-Reverb.wav-8f42afe0ff42c7e47a380af7c2b0357b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

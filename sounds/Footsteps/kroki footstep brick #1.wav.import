@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/kroki footstep brick #1.wav-319ae7d5e545e0ebb0c4b43e7b540f8a.sample"
+
+[deps]
+
+source_file="res://sounds/Footsteps/kroki footstep brick #1.wav"
+dest_files=[ "res://.import/kroki footstep brick #1.wav-319ae7d5e545e0ebb0c4b43e7b540f8a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

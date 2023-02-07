@@ -1,13 +1,14 @@
 extends Node2D
 
-var start_boardII = preload("res://src/story_boards/I/start_boardII.tscn")
-var start_board = preload("res://src/story_boards/I/start_board.tscn")
-var grandpa_board = preload("res://src/story_boards/I/grandpa_board.tscn")
-var grandma_board = preload("res://src/story_boards/I/grandma_board.tscn")
-var grandpa_board_small = preload("res://src/story_boards/I/grandpa_board_small.tscn")
-var end_actI_board_small = preload("res://src/story_boards/I/end_act_board_small.tscn")
-var bohema_board = preload("res://src/story_boards/I/bohema_board_.tscn")
-var fabric_board = preload("res://src/story_boards/I/fabric.tscn")
+var start_board = preload("res://src/story_boards/I/start_game/start_board.tscn")
+var start_boardII = preload("res://src/story_boards/I/start_game/start_boardII.tscn")
+var grandpa_board = preload("res://src/story_boards/I/grandparents/grandpa_board.tscn")
+var grandma_board = preload("res://src/story_boards/I/grandparents/grandma_board.tscn")
+var grandpa_board_small = preload("res://src/story_boards/I/grandparents/grandpa_board_small.tscn")
+var bohema_board = preload("res://src/story_boards/I/fabric_theatre/bohema_board_.tscn")
+var fabric_board = preload("res://src/story_boards/I/fabric_theatre/fabric_board.tscn")
+var hause_end = preload("res://src/story_boards/I/end_act_I/house_I_end.tscn")
+var end = preload("res://src/story_boards/I/end_act_I/end_first_chapter.tscn")
 
 
 func _input(event):
@@ -23,7 +24,6 @@ func _ready():
 		$AnimationPlayer.play("stat")
 		unactive_buttons()
 
-		
 
 func unactive_buttons():
 		for i in get_node("level/places").get_children():
@@ -46,7 +46,9 @@ func gameplay_provider():
 						elif Global.paragraf == 2 and Global.last_tuch_build == "fabric":
 								start_fabric()
 						elif Global.paragraf == 3:
-								pass
+								start_end_act_I_HOME()
+						elif Global.paragraf == 4:
+								start_end_post()
 					2:pass
 					3:pass
 
@@ -92,15 +94,17 @@ func start_grandpa():
 		get_node("level/places/theatre").active = true
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
 		Global.zero = 2
-		
+
+#func stop_music():
+#		$ambient.stop()
 
 func start_bohema():
 		yield(get_tree().create_timer(2), "timeout")
 		var s_board = bohema_board.instance()
 		s_board.modulate.a = 0
 		unactive_buttons()
-		get_node("level/places/hause").active = true
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
+		get_node("level/places/hause").active = true
 		Global.paragraf = 3
 		Global.zero = 2
 		
@@ -109,36 +113,45 @@ func start_fabric():
 		var s_board = fabric_board.instance()
 		s_board.modulate.a = 0
 		unactive_buttons()
-		get_node("level/places/hause").active = true
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
+		get_node("level/places/hause").active = true
 		Global.paragraf = 3
 		Global.zero = 2
 
 func start_end_act_I_HOME():
 		yield(get_tree().create_timer(1), "timeout")
-		var s_board = fabric_board.instance()
-		s_board.modulate.a = 0
 		unactive_buttons()
-		get_node("level/places/hause").active = true
+		var s_board = hause_end.instance()
+		s_board.modulate.a = 0
+		get_node("level/places/post").active = true
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
 		Global.paragraf = 4
+		Global.zero = 2
+
+func start_end_post():
+		yield(get_tree().create_timer(1), "timeout")
+		var s_board = end.instance()
+		s_board.modulate.a = 0
+		unactive_buttons()
+		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
+		Global.paragraf = 5
 		Global.zero = 2
 
 func add_small_grandpa():
 		#yield(get_tree().create_timer(2), "timeout")
 		var s_board = grandpa_board_small.instance() 
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
-	
+
 func add_small_end():
 		var s_board = grandpa_board_small.instance() 
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
-		
+
 func camera_control_start():
 		var tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $player.global_position, $level/places/hause.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		yield(get_tree().create_timer(2), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/hause.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
@@ -148,12 +161,12 @@ func camera_control_start_hause():
 		tween.interpolate_property($player/Camera2D, "global_position", $player.global_position, $level/places/grandma.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		yield(get_tree().create_timer(2), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/grandma.global_position, $level/places/medium.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		yield(get_tree().create_timer(2), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/medium.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
@@ -163,34 +176,25 @@ func camera_control_after_grand():
 		tween.interpolate_property($player/Camera2D, "global_position", $player.global_position, $level/places/fabric.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		yield(get_tree().create_timer(2), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/fabric.global_position, $level/places/theatre.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		yield(get_tree().create_timer(2), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/theatre.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
-		
 
-func camera_control_paragraf22():
-		var tween = get_node("Tween")
-		tween.interpolate_property($player/Camera2D, "global_position", $player.global_position, $level/places/story_button.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
-		yield($Tween,"tween_completed")
-		yield(get_tree().create_timer(2), "timeout")
-		tween = get_node("Tween")
-		tween.interpolate_property($player/Camera2D, "global_position", $level/places/story_button.global_position, $player.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-		tween.start()
 
 func music_fade_out(var x):
 		var music_tween = get_node("MusicTween")
 		music_tween.interpolate_property(x, "volume_db", 0, -80, 8, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		music_tween.start()
-		
+
+
 func music_fade_in(var x):
 		var music_tween = get_node("MusicTween")
-		music_tween.interpolate_property(x, "volume_db", -80, 30,  4, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		music_tween.interpolate_property(x, "volume_db", -80, 0,  4, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		music_tween.start()
 
