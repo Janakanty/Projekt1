@@ -15,8 +15,5 @@ func _on_Button_pressed():
 				queue_free()
 				
 
-
-
-
 func _on_Timer_timeout():
 	_on_Button_pressed()

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://fonts/LACK_50.tres" type="DynamicFont" id=1]
-[ext_resource path="res://src/story_boards/I/grandparents/small_after_grand.gd" type="Script" id=2]
+[ext_resource path="res://src/story_boards/I/grandparents/small_after_ground.gd" type="Script" id=2]
 [ext_resource path="res://src/story_boards/story_board_small.tscn" type="PackedScene" id=3]
 
 [node name="story_board_small_grandpa" instance=ExtResource( 3 )]
@@ -25,5 +25,4 @@ align = 1
 valign = 1
 autowrap = true
 
-[connection signal="tree_exited" from="." to="." method="_on_story_board_small_grandpa_tree_exited"]
 [connection signal="tree_exited" from="Node" to="Node" method="_on_Node_tree_exited"]

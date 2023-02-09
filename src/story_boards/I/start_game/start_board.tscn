@@ -429,5 +429,4 @@ anims/from3to4 = SubResource( 6 )
 anims/from4to5 = SubResource( 7 )
 anims/from5to6 = SubResource( 8 )
 
-[connection signal="tree_exited" from="." to="." method="_on_start_board_tree_exited"]
 [connection signal="tree_exiting" from="Node" to="Node" method="_on_Node_tree_exiting"]
