@@ -41,6 +41,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/invisible = SubResource( 2 )
+
 [node name="TextureRect" type="TextureRect" parent="."]
 anchor_left = 0.056
 anchor_top = 0.1
@@ -59,9 +63,5 @@ anchor_bottom = 1.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/RESET = SubResource( 1 )
-anims/invisible = SubResource( 2 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

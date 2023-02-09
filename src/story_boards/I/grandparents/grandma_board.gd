@@ -5,6 +5,9 @@ var end_board = false
 var slide = 1 
 var max_slide = 17
 
+func _ready():
+		pass 
+
 func trigger_story_board():
 		if slide != max_slide:
 				animation_name = str("from" , (slide-1) , "to" ,slide)
