@@ -6,17 +6,26 @@
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="body" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -20, -21, -20, 18, 19, 19, 20, -21 )
-
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 9.53674e-07, 9.53674e-07 )
-scale = Vector2( 0.112874, 0.112874 )
+scale = Vector2( 0.0745435, 0.0761269 )
 texture = ExtResource( 2 )
 
+[node name="body" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -20, -21, -20, 18, 19, 19, 20, -21 )
+
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2( 0.640091, 0 )
 scale = Vector2( 0.980183, 1 )
 polygon = PoolVector2Array( -0.653032, -21, -21, -21, -21, 19, 20, 19, 20, -21 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.8, 0.8 )
+smoothing_enabled = true
+smoothing_speed = 3.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]

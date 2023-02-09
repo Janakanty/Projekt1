@@ -30,8 +30,8 @@ func grandpa_think():
 	get_parent().get_node("main").add_small_grandpa()
 
 #MUZYKA
-func music_startt():
-	get_tree().root.get_node("main/music_machine").play_music_start()
+func music_start(chanel, path, time):
+	get_parent().get_node("main/music_machine").play_music(chanel, path, time)
 
-func music_stopp():
-	get_tree().root.get_node("main/music_machine").play_music_stop()
+func music_stop(chanel, time):
+	get_parent().get_node("main/music_machine").stop_music(chanel, time)

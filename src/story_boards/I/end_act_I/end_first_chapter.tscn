@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://fonts/LACK_30.tres" type="DynamicFont" id=1]
 [ext_resource path="res://fonts/LACK_50.tres" type="DynamicFont" id=2]
@@ -7,10 +7,14 @@
 [ext_resource path="res://sounds/psycho medium.wav" type="AudioStream" id=5]
 [ext_resource path="res://graphics/end_act_I/book_inside.png" type="Texture" id=6]
 [ext_resource path="res://src/story_boards/story_board_big.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/story_boards/I/end_act_I/end_first_chapter.gd" type="Script" id=8]
 
 [node name="story_board_big" instance=ExtResource( 7 )]
 
-[node name="Control" type="Control" parent="." index="2"]
+[node name="Node" type="Node" parent="." index="0"]
+script = ExtResource( 8 )
+
+[node name="Control" type="Control" parent="." index="3"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 
@@ -92,7 +96,7 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="ColorRect3" type="ColorRect" parent="." index="6"]
+[node name="ColorRect3" type="ColorRect" parent="." index="7"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 1360.0
@@ -117,6 +121,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="7"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 stream = ExtResource( 5 )
 autoplay = true

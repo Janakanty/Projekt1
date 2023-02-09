@@ -5,6 +5,9 @@ var slide = 1
 var max_slide = 17
 var animation_name: String = ""
 
+func _ready():
+		Global.music_stop(1,2)
+
 func trigger_story_board():
 		if slide != max_slide:
 				animation_name = str("from" , (slide-1) , "to" ,slide)

@@ -704,10 +704,14 @@ margin_top = -0.164001
 margin_right = 0.151978
 margin_bottom = -0.221008
 custom_fonts/font = ExtResource( 1 )
-text = "Muszę to sprawdzić, w końcu chodzi o moją matkę."
+text = "Muszę to sprawdzić,
+ w końcu chodzi o moją matkę."
 align = 1
 valign = 1
 autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TextureRect4" type="TextureRect" parent="Control3" index="3"]
 modulate = Color( 1, 1, 1, 0 )
