@@ -6,10 +6,12 @@
 [node name="story_button" instance=ExtResource( 1 )]
 
 [node name="Sprite" parent="." index="0"]
-position = Vector2( 4, 2 )
-scale = Vector2( 0.0373887, 0.0373887 )
+position = Vector2( -6, 5 )
+scale = Vector2( 0.116091, 0.116092 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2( 6, 0.5 )
-scale = Vector2( 0.319058, 0.319058 )
+[node name="Area2D" parent="." index="1"]
+position = Vector2( 6, 0 )
+
+[node name="Label" parent="." index="2"]
+text = "Poczta"

@@ -10,5 +10,11 @@ position = Vector2( 9.53674e-07, 4.76837e-07 )
 scale = Vector2( 0.1163, 0.1163 )
 texture = ExtResource( 2 )
 
+[node name="Area2D" parent="." index="1"]
+position = Vector2( 2, 0 )
+
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2( 6, -5 )
+
+[node name="Label" parent="." index="2"]
+text = "Fabryka"

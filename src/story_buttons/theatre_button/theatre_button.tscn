@@ -12,3 +12,6 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2( 10, -9 )
+
+[node name="Label" parent="." index="2"]
+text = "Teatr"

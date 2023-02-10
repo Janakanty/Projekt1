@@ -18,4 +18,6 @@ func trigger_story_board():
 				end_board = true
 
 func _on_Node_tree_exited():
-		Global.music_stop(1,2)
+		Global.music_stop(2,2)
+		Global.music_start(1,"res://music/ambient.wav", 2)
+		Global.camera_control_start()

@@ -8,7 +8,7 @@ extends Node
 #^ PO KROPCE WYWOŁUJESZ METODĘ NP. get_tree().root.get_node("main/music_machine").play_music("res://music/Motyw przewodni gry.wav", 0)
 
 func _ready():
-		play_music(1, "res://music/ambient.wav", 0)
+		play_music(2, "res://music/scena 0.wav", 0)
 		
 func chanel(number) -> AudioStreamPlayer:
 		var ch = 0

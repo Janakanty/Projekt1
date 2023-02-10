@@ -6,7 +6,8 @@ var max_slide = 17
 var animation_name: String = ""
 
 func _ready():
-		Global.music_stop(1,2)
+		Global.music_start(1,"res://music/ambient.wav",2)
+		Global.music_stop(2,8)
 
 func trigger_story_board():
 		if slide != max_slide:
