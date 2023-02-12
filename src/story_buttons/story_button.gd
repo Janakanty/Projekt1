@@ -14,6 +14,7 @@ func _on_Area2D_body_entered(body):
 				Global.moveing = false
 				get_parent().get_parent().get_parent().gameplay_provider()
 				get_node("Area2D").visible = false
+				
 
 
 

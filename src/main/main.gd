@@ -47,9 +47,11 @@ func gameplay_provider():
 						elif Global.paragraf == 2 and Global.last_tuch_build == "theatre":
 								start_scene("theatre")
 								get_node("level/places/hause").active = true
+								get_node("level/places/hause").get_node("Area2D").visible = true
 						elif Global.paragraf == 2 and Global.last_tuch_build == "fabric":
 								start_scene("fabric")
 								get_node("level/places/hause").active = true
+								get_node("level/places/hause").get_node("Area2D").visible = true
 						elif Global.paragraf == 3 and Global.last_tuch_build == "hause":
 								start_end_act_I_HOME()
 						elif Global.paragraf == 4:
