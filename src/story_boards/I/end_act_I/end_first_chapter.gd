@@ -21,7 +21,7 @@ func trigger_story_board():
 func attributes():
 		match slide:
 				2: 
-						Global.music_start(3,"res://sounds/psycho medium.wav",3)
+						Global.music_start(3,"res://music/poczta.wav",3)
 				4:
 						get_parent().stop_timer = true
 						get_parent().get_node("Button").visible = false
