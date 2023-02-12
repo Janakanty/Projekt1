@@ -1,11 +1,16 @@
 extends Control
 
+var stop_timer: bool = false
+
 func _ready():
 		$AnimationPlayer.play("invisible")
 		Global.story = true
+		get_node("Node").trigger_story_board()
 
 
 func _on_Button_pressed():
+		get_node("slides").advance(1.0) # podejrzane. Działa ale nie wiem dlaczego xD Trzeba mieć to na oku (tutaj robił tak aby animacje się dokańczały zanim wejdzie nowa. 
+		stop_timer = false
 		get_node("Node").trigger_story_board()
 		$Timer.start()
 		if get_node("Node").end_board == true:
@@ -16,4 +21,9 @@ func _on_Button_pressed():
 				
 
 func _on_Timer_timeout():
-	_on_Button_pressed()
+		if stop_timer == false:
+				_on_Button_pressed()
+				
+
+
+

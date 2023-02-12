@@ -1,11 +1,29 @@
 extends Node
 
-var end_board = true
+var end_board = false
+var slide = 1 
+var max_slide = 5
+var animation_name: String = ""
+
 
 func _ready():
-	pass # Replace with function body.
+		Global.music_stop(1,2)
 
 func trigger_story_board():
-	pass
+		if slide != max_slide:
+				attributes()
+				animation_name = str("from" , (slide-1) , "to" ,slide)
+				get_parent().get_node("slides").play(animation_name)
+				slide += 1
+		else:
+				end_board = true
+
+func attributes():
+		match slide:
+				2: 
+						Global.music_start(3,"res://sounds/psycho medium.wav",3)
 
 
+func _on_Node_tree_exited():
+		Global.music_start(1,"res://music/ambient.wav", 2)
+		Global.music_stop(3,3)

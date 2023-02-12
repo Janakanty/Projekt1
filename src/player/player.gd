@@ -5,8 +5,9 @@ var movement = Vector2()
 var speed = 300
 
 func _physics_process(delta):
-		movement()
-		casual_movement()
+		if Global.let_walking == true:
+				movement()
+				casual_movement()
 
 func go_to(x):
 		destination = x

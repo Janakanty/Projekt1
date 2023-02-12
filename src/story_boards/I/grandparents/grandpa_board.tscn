@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://fonts/LACK_30.tres" type="DynamicFont" id=1]
 [ext_resource path="res://fonts/LACK_20.tres" type="DynamicFont" id=2]
@@ -247,24 +247,8 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=11]
-resource_name = "from10to11"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control2/TextureRect4:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
 [sub_resource type="Animation" id=13]
-resource_name = "from11to12"
+resource_name = "from10to11"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect5:modulate")
@@ -280,7 +264,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=14]
-resource_name = "from12to13"
+resource_name = "from11to12"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect6:modulate")
@@ -296,7 +280,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-resource_name = "from13to14"
+resource_name = "from12to13"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect2:modulate")
@@ -312,7 +296,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-resource_name = "from14to15"
+resource_name = "from13to14"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect7:modulate")
@@ -328,7 +312,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=17]
-resource_name = "from15to16"
+resource_name = "from14to15"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect8:modulate")
@@ -344,7 +328,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=18]
-resource_name = "from16to17"
+resource_name = "from15to16"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect9:modulate")
@@ -498,12 +482,24 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control2/TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=11]
 resource_name = "from9to10"
 length = 0.5
 tracks/0/type = "value"
-tracks/0/path = NodePath("Control2/TextureRect:modulate")
+tracks/0/path = NodePath("Control2/TextureRect4:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -757,9 +753,6 @@ margin_right = -618.0
 margin_bottom = -151.0
 texture = ExtResource( 6 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect2" type="TextureRect" parent="Control2" index="1"]
 modulate = Color( 1, 1, 1, 0 )
@@ -859,9 +852,6 @@ margin_right = -474.0
 margin_bottom = -62.0
 texture = ExtResource( 4 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control2/TextureRect6" index="0"]
 modulate = Color( 0, 0, 0, 1 )
@@ -974,13 +964,12 @@ __meta__ = {
 [node name="slides" type="AnimationPlayer" parent="." index="8"]
 anims/RESET = SubResource( 1 )
 anims/from0to1 = SubResource( 2 )
-anims/from10to11 = SubResource( 11 )
-anims/from11to12 = SubResource( 13 )
-anims/from12to13 = SubResource( 14 )
-anims/from13to14 = SubResource( 15 )
-anims/from14to15 = SubResource( 16 )
-anims/from15to16 = SubResource( 17 )
-anims/from16to17 = SubResource( 18 )
+anims/from10to11 = SubResource( 13 )
+anims/from11to12 = SubResource( 14 )
+anims/from12to13 = SubResource( 15 )
+anims/from13to14 = SubResource( 16 )
+anims/from14to15 = SubResource( 17 )
+anims/from15to16 = SubResource( 18 )
 anims/from1to2 = SubResource( 3 )
 anims/from2to3 = SubResource( 4 )
 anims/from3to4 = SubResource( 5 )
@@ -989,6 +978,6 @@ anims/from5to6 = SubResource( 7 )
 anims/from6to7 = SubResource( 8 )
 anims/from7to8 = SubResource( 9 )
 anims/from8to9 = SubResource( 10 )
-anims/from9to10 = SubResource( 12 )
+anims/from9to10 = SubResource( 11 )
 
 [connection signal="tree_exited" from="Node" to="Node" method="_on_Node_tree_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://fonts/LACK_30.tres" type="DynamicFont" id=1]
 [ext_resource path="res://fonts/LACK_50.tres" type="DynamicFont" id=2]
@@ -224,40 +224,8 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
-resource_name = "from10to11"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control3/TextureRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
-[sub_resource type="Animation" id=13]
-resource_name = "from11to12"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control3/TextureRect3:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
-}
-
 [sub_resource type="Animation" id=14]
-resource_name = "from12to13"
+resource_name = "from10to11"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control3/TextureRect2:modulate")
@@ -273,7 +241,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=15]
-resource_name = "from13to14"
+resource_name = "from11to12"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control3/TextureRect4:modulate")
@@ -289,7 +257,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=16]
-resource_name = "from14to15"
+resource_name = "from12to13"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control3/TextureRect5:modulate")
@@ -305,7 +273,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=17]
-resource_name = "from15to16"
+resource_name = "from13to14"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control3/TextureRect6:modulate")
@@ -415,17 +383,13 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
-
-[sub_resource type="Animation" id=9]
-resource_name = "from7to8"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/path = NodePath("Control2/TextureRect:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control2/TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
@@ -433,7 +397,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=10]
-resource_name = "from8to9"
+resource_name = "from7to8"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2/TextureRect2:modulate")
@@ -449,7 +413,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=11]
-resource_name = "from9to10"
+resource_name = "from8to9"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("Control2:modulate")
@@ -462,6 +426,34 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control3/TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "from9to10"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control3/TextureRect3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
 }
 
 [node name="start_boardII" instance=ExtResource( 12 )]
@@ -609,9 +601,6 @@ margin_right = -347.0
 margin_bottom = 19.0
 texture = ExtResource( 10 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureRect2" type="TextureRect" parent="Control2" index="1"]
 modulate = Color( 1, 1, 1, 0 )
@@ -623,9 +612,6 @@ margin_right = 865.0
 margin_bottom = 1404.0
 texture = ExtResource( 3 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control2/TextureRect2" index="0"]
 modulate = Color( 0.192157, 0.160784, 0.160784, 1 )
@@ -772,15 +758,13 @@ autowrap = true
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1059.0
-margin_top = 402.0
-margin_right = 403.0
-margin_bottom = 33.0
+margin_left = 1023.0
+margin_top = 404.0
+margin_right = 367.0
+margin_bottom = 35.0
+rect_scale = Vector2( 1.03554, 1.37568 )
 texture = ExtResource( 3 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control3/TextureRect6" index="0"]
 modulate = Color( 0, 0, 0, 1 )
@@ -788,10 +772,10 @@ anchor_left = 0.304
 anchor_top = 0.12
 anchor_right = 0.645
 anchor_bottom = 0.418
-margin_left = 24.744
-margin_top = -0.32
-margin_right = -24.28
-margin_bottom = -0.197998
+margin_left = 21.3302
+margin_top = 35.3476
+margin_right = -17.6938
+margin_bottom = -42.5304
 custom_fonts/font = ExtResource( 1 )
 text = "Dziadek zawsze wiedział wszystko, szkoda że już nie żyje. Chyba że..."
 valign = 1
@@ -800,20 +784,18 @@ autowrap = true
 [node name="slides" type="AnimationPlayer" parent="." index="7"]
 anims/RESET = SubResource( 2 )
 anims/from0to1 = SubResource( 1 )
-anims/from10to11 = SubResource( 12 )
-anims/from11to12 = SubResource( 13 )
-anims/from12to13 = SubResource( 14 )
-anims/from13to14 = SubResource( 15 )
-anims/from14to15 = SubResource( 16 )
-anims/from15to16 = SubResource( 17 )
+anims/from10to11 = SubResource( 14 )
+anims/from11to12 = SubResource( 15 )
+anims/from12to13 = SubResource( 16 )
+anims/from13to14 = SubResource( 17 )
 anims/from1to2 = SubResource( 3 )
 anims/from2to3 = SubResource( 4 )
 anims/from3to4 = SubResource( 5 )
 anims/from4to5 = SubResource( 6 )
 anims/from5to6 = SubResource( 7 )
 anims/from6to7 = SubResource( 8 )
-anims/from7to8 = SubResource( 9 )
-anims/from8to9 = SubResource( 10 )
-anims/from9to10 = SubResource( 11 )
+anims/from7to8 = SubResource( 10 )
+anims/from8to9 = SubResource( 11 )
+anims/from9to10 = SubResource( 13 )
 
 [connection signal="tree_exited" from="Node" to="Node" method="_on_Node_tree_exited"]

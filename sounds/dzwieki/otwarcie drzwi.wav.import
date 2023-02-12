@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/otwarcie drzwi.wav-a15e55d3f878daa0d661ca97e6626860.sample"
+
+[deps]
+
+source_file="res://sounds/dzwieki/otwarcie drzwi.wav"
+dest_files=[ "res://.import/otwarcie drzwi.wav-a15e55d3f878daa0d661ca97e6626860.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

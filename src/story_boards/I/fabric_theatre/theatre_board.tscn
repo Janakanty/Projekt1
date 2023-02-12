@@ -241,6 +241,11 @@ tracks/0/keys = {
 [node name="Node" type="Node" parent="." index="0"]
 script = ExtResource( 8 )
 
+[node name="TextureRect" parent="." index="2"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Control" type="Control" parent="." index="3"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -367,15 +372,12 @@ autowrap = true
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1206.0
-margin_top = 205.0
-margin_right = 402.0
-margin_bottom = -247.0
+margin_left = 1190.0
+margin_top = 203.0
+margin_right = 386.0
+margin_bottom = -249.0
 texture = ExtResource( 4 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label" type="Label" parent="Control/TextureRect6" index="0"]
 modulate = Color( 0, 0, 0, 1 )

@@ -37,3 +37,4 @@ func stop_music(chanel_nr, time_to_quiet) -> void:
 		music_tween.start()
 		yield($Tween_quiter,"tween_completed")
 		chanel.stop()
+
