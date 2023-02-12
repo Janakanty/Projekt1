@@ -1,6 +1,6 @@
 extends Node
 
-
+var music_tween
 #DO FUNKCJI MOŻNA DOSTAC SIĘ Z KAŻDEGO MIEJSCA W GRZE PRZEZ ŚCIEŻKĘ: 
 
 #get_tree().root.get_node("main/music_machine")
@@ -23,7 +23,7 @@ func play_music(chanel_nr, music_path, time_to_max_loud) -> void:
 		var chanel = chanel(chanel_nr)
 		if time_to_max_loud != 0:
 				chanel.volume_db = -80
-		var music_tween = get_node("Tween_louder")
+		music_tween = get_node("Tween_louder")
 		music_tween.interpolate_property(chanel, "volume_db", -80, 0, time_to_max_loud, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		music_tween.start()
 		chanel.stream = load(music_path)
@@ -32,7 +32,7 @@ func play_music(chanel_nr, music_path, time_to_max_loud) -> void:
 
 func stop_music(chanel_nr, time_to_quiet) -> void:
 		var chanel = chanel(chanel_nr)
-		var music_tween = get_node("Tween_quiter")
+		music_tween = get_node("Tween_quiter")
 		music_tween.interpolate_property(chanel, "volume_db", 0, -80, time_to_quiet, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 		music_tween.start()
 		yield($Tween_quiter,"tween_completed")

@@ -3,13 +3,15 @@ extends Node2D
 var start_board = preload("res://src/story_boards/I/start_game/start_board.tscn")
 var start_boardII = preload("res://src/story_boards/I/start_game/start_boardII.tscn")
 var grandpa_board_small = preload("res://src/story_boards/I/grandparents/grandpa_board_small.tscn")
-var hause_end = preload("res://src/story_boards/I/end_act_I/house_I_end.tscn")
+var hause_end = preload("res://src/story_boards/I/end_act_I/endhouse_board.tscn")
 var end = preload("res://src/story_boards/I/end_act_I/end_first_chapter.tscn")
 
 var tscns = {"grandma": "res://src/story_boards/I/grandparents/grandma_board.tscn",
 			 "grandpa": "res://src/story_boards/I/grandparents/grandpa_board.tscn",
 			 "theatre": "res://src/story_boards/I/fabric_theatre/theatre_board.tscn",
-			 "fabric": "res://src/story_boards/I/fabric_theatre/fabric_board.tscn"}
+			 "fabric" : "res://src/story_boards/I/fabric_theatre/fabric_board.tscn",
+			 "hause"  : "res://src/story_boards/I/end_act_I/endhouse_board.tscn"
+			}
 
 
 func _input(event):
@@ -28,7 +30,9 @@ func unactive_buttons():
 		for i in get_node("level/places").get_children():
 				i.active = false
 
+
 func gameplay_provider():
+		Global.black_board_in()
 		if Global.start == false:
 				start_game()
 		elif Global.zero == 1:
@@ -42,9 +46,11 @@ func gameplay_provider():
 								start_scene("grandpa")	
 						elif Global.paragraf == 2 and Global.last_tuch_build == "theatre":
 								start_scene("theatre")
+								get_node("level/places/hause").active = true
 						elif Global.paragraf == 2 and Global.last_tuch_build == "fabric":
 								start_scene("fabric")
-						elif Global.paragraf == 3:
+								get_node("level/places/hause").active = true
+						elif Global.paragraf == 3 and Global.last_tuch_build == "hause":
 								start_end_act_I_HOME()
 						elif Global.paragraf == 4:
 								start_end_post()
@@ -53,7 +59,7 @@ func gameplay_provider():
 
 
 func start_game():
-		yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(4), "timeout")
 		var s_board = start_board.instance()
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
 		get_node("level/places/hause").active = true
@@ -82,14 +88,16 @@ func start_scene(scene_name:String):
 			get_node("level/places/theatre").active = true
 		elif scene_name == "theatre" or scene_name == "fabric":
 			get_node("level/places/hause").active = true
+			print("aktywuje active hause")
 			Global.paragraf = 3
-	
-	
+		elif scene_name == "hause":
+			get_node("level/places/post").active = true
+
+
 func start_end_act_I_HOME():
 		yield(get_tree().create_timer(1), "timeout")
 		unactive_buttons()
 		var s_board = hause_end.instance()
-		s_board.modulate.a = 0
 		get_node("level/places/post").active = true
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
 		Global.paragraf = 4
@@ -98,7 +106,6 @@ func start_end_act_I_HOME():
 func start_end_post():
 		yield(get_tree().create_timer(1), "timeout")
 		var s_board = end.instance()
-		s_board.modulate.a = 0
 		unactive_buttons()
 		get_node("player/Camera2D/CanvasLayer").add_child(s_board)
 		Global.paragraf = 5
@@ -119,11 +126,12 @@ func camera_control_start():
 		tween.interpolate_property($player/Camera2D, "global_position", $player.transform.get_origin(), $level/places/hause.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		#yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/hause.global_position, $player.transform.get_origin(), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
+		Global.black_board_out()
 		Global.let_walking = true
 
 func camera_control_start_hause():
@@ -132,16 +140,17 @@ func camera_control_start_hause():
 		tween.interpolate_property($player/Camera2D, "global_position", $player.transform.get_origin(), $level/places/grandma.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		#yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/grandma.global_position, $level/places/medium.transform.get_origin(), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		#yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/medium.global_position, $player.transform.get_origin(), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
+		Global.black_board_out()
 		Global.let_walking = true
 
 func camera_control_after_grand():
@@ -150,15 +159,32 @@ func camera_control_after_grand():
 		tween.interpolate_property($player/Camera2D, "global_position", $player.transform.get_origin(), $level/places/fabric.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		#yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/fabric.global_position, $level/places/theatre.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
-		#yield(get_tree().create_timer(1), "timeout")
+		yield(get_tree().create_timer(1), "timeout")
 		tween = get_node("Tween")
 		tween.interpolate_property($player/Camera2D, "global_position", $level/places/theatre.global_position, $player.transform.get_origin(), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
 		tween.start()
 		yield($Tween,"tween_completed")
+		Global.black_board_out()
+		Global.let_walking = true
+		
+
+func camera_control_end():
+		print("blablabla2")
+		Global.let_walking = false
+		var tween = get_node("Tween")
+		tween.interpolate_property($player/Camera2D, "global_position", $player.transform.get_origin(), $level/places/post.global_position, 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.start()
+		yield($Tween,"tween_completed")
+		yield(get_tree().create_timer(1), "timeout")
+		tween = get_node("Tween")
+		tween.interpolate_property($player/Camera2D, "global_position", $level/places/post.global_position, $player.transform.get_origin(), 1, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
+		tween.start()
+		yield($Tween,"tween_completed")
+		Global.black_board_out()
 		Global.let_walking = true
 

@@ -1,5 +1,7 @@
 extends Node
 
+# DZIADEK
+
 var end_board = false
 var slide = 1 
 var max_slide = 17

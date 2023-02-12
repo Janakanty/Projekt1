@@ -22,3 +22,9 @@ func movement():
 				movement = position.direction_to(destination) * speed 
 				movement = move_and_slide(movement)
 				
+
+func bars_in():
+		$black_bars.play("bars_in_camera")
+		
+func bars_out():
+		$black_bars.play("bars_out_camera")

@@ -12,15 +12,6 @@
 [ext_resource path="res://src/story_buttons/theatre_button/theatre_button.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/story_buttons/fabric_button/fabric_button.tscn" type="PackedScene" id=12]
 
-[sub_resource type="GDScript" id=4]
-
-[sub_resource type="GDScript" id=3]
-script/source = "extends Node2D
-
-func story_button_controller():
-		pass
-"
-
 [sub_resource type="Animation" id=1]
 length = 0.001
 tracks/0/type = "value"
@@ -35,10 +26,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 0.0666667, 0.0627451, 0.0627451, 1 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "stat"
-length = 2.0
+length = 3.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -46,14 +49,40 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1.1, 1.9 ),
+"times": PoolRealArray( 0, 0.8, 2.9 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.0666667, 0.0627451, 0.0627451, 1 ), Color( 0.0666667, 0.0627451, 0.0627451, 1 ), Color( 0.145098, 0.121569, 0.121569, 0 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0.145098, 0.121569, 0.121569, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="GDScript" id=4]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends Node2D
+
+func story_button_controller():
+		pass
+"
 
 [node name="main" type="Node2D"]
 script = ExtResource( 4 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+anims/RESET = SubResource( 1 )
+anims/stat = SubResource( 2 )
 
 [node name="music_machine" parent="." instance=ExtResource( 5 )]
 
@@ -105,15 +134,7 @@ margin_left = -1956.0
 margin_top = -1937.0
 margin_right = 2899.0
 margin_bottom = 2513.0
-color = Color( 0.0666667, 0.0627451, 0.0627451, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-reset_on_save = false
-anims/RESET = SubResource( 1 )
-anims/stat = SubResource( 2 )
+color = Color( 0, 0, 0, 1 )
 
 [node name="Tween" type="Tween" parent="."]
 

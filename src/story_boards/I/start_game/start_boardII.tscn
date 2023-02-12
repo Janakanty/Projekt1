@@ -730,10 +730,10 @@ autowrap = true
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1044.0
-margin_top = 66.0
-margin_right = 388.0
-margin_bottom = -303.0
+margin_left = 1043.0
+margin_top = 89.0
+margin_right = 338.0
+margin_bottom = -129.0
 texture = ExtResource( 3 )
 expand = true
 __meta__ = {
@@ -746,10 +746,10 @@ anchor_left = 0.302
 anchor_top = 0.124
 anchor_right = 0.628
 anchor_bottom = 0.399
-margin_left = 22.272
-margin_top = 14.836
-margin_right = 3.20795
-margin_bottom = 0.310974
+margin_left = 22.07
+margin_top = 36.112
+margin_right = 3.00598
+margin_bottom = -2.41299
 custom_fonts/font = ExtResource( 1 )
 text = "Moja babcia powinna coś wiedzieć. Ciekawe czy mieszka tam gdzie 10 lat temu?"
 autowrap = true
@@ -758,28 +758,28 @@ autowrap = true
 modulate = Color( 1, 1, 1, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 1023.0
-margin_top = 404.0
-margin_right = 367.0
-margin_bottom = 35.0
-rect_scale = Vector2( 1.03554, 1.37568 )
+margin_left = 917.0
+margin_top = 390.0
+margin_right = 512.0
+margin_bottom = 157.0
 texture = ExtResource( 3 )
 expand = true
 
 [node name="Label" type="Label" parent="Control3/TextureRect6" index="0"]
 modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.304
-anchor_top = 0.12
-anchor_right = 0.645
-anchor_bottom = 0.418
-margin_left = 21.3302
-margin_top = 35.3476
-margin_right = -17.6938
-margin_bottom = -42.5304
+margin_left = 501.0
+margin_top = 151.0
+margin_right = 907.0
+margin_bottom = 296.0
 custom_fonts/font = ExtResource( 1 )
 text = "Dziadek zawsze wiedział wszystko, szkoda że już nie żyje. Chyba że..."
 valign = 1
 autowrap = true
+
+[node name="Button" parent="." index="6"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="slides" type="AnimationPlayer" parent="." index="7"]
 anims/RESET = SubResource( 2 )

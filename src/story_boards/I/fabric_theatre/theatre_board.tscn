@@ -455,7 +455,7 @@ align = 1
 valign = 1
 autowrap = true
 
-[node name="slides" type="AnimationPlayer" parent="." index="7"]
+[node name="slides" type="AnimationPlayer" parent="." index="6"]
 anims/RESET = SubResource( 1 )
 anims/from0to1 = SubResource( 2 )
 anims/from1to2 = SubResource( 3 )

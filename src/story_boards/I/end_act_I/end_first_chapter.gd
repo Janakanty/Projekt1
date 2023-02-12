@@ -22,8 +22,10 @@ func attributes():
 		match slide:
 				2: 
 						Global.music_start(3,"res://sounds/psycho medium.wav",3)
+				4:
+						get_parent().stop_timer = true
+						get_parent().get_node("Button").visible = false
 
 
 func _on_Node_tree_exited():
-		Global.music_start(1,"res://music/ambient.wav", 2)
-		Global.music_stop(3,3)
+		pass

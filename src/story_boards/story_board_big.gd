@@ -1,5 +1,7 @@
 extends Control
 
+# DOM KONIEC I AKTU
+
 var stop_timer: bool = false
 
 func _ready():
@@ -23,7 +25,6 @@ func _on_Button_pressed():
 func _on_Timer_timeout():
 		if stop_timer == false:
 				_on_Button_pressed()
-				
 
 
 

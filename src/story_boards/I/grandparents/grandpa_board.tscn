@@ -961,7 +961,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slides" type="AnimationPlayer" parent="." index="8"]
+[node name="Button" parent="." index="5"]
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slides" type="AnimationPlayer" parent="." index="7"]
 anims/RESET = SubResource( 1 )
 anims/from0to1 = SubResource( 2 )
 anims/from10to11 = SubResource( 13 )

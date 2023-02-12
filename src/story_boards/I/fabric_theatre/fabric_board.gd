@@ -1,5 +1,7 @@
 extends Node
 
+# FABRYKA
+
 var end_board = false
 var slide = 1 
 var max_slide = 9
@@ -7,7 +9,7 @@ var animation_name: String = ""
 
 func _ready():
 		Global.music_stop(1,2)
-		Global.music_start(2,"res://music/factorysounds.wav", 0)
+		Global.music_start(2,"res://music/factorysounds.wav", 3)
 
 func trigger_story_board():
 		if slide != max_slide:

@@ -1,12 +1,15 @@
 extends Node
 
+# BABCIA
+
 var animation_name: String = ""
 var end_board = false
 var slide = 1 
 var max_slide = 16
 
 func _ready():
-		pass 
+		Global.music_stop(1,1)
+		Global.music_start(2,"res://music/babka1.wav",0)
 
 func trigger_story_board():
 		if slide != max_slide:
@@ -20,6 +23,8 @@ func trigger_story_board():
 
 
 func _on_Node_tree_exited():
+	Global.music_stop(2,4)
+	Global.music_start(1,"res://music/ambient.wav",4)
 	Global.grandpa_think()
 
 
