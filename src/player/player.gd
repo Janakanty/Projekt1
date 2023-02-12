@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 var destination = Vector2()
 var movement = Vector2()
-var speed = 300
+var speed = 100
 
 func _physics_process(delta):
 		if Global.let_walking == true:
