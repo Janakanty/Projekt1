@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://graphics/main/test.png" type="Texture" id=1]
+[ext_resource path="res://graphics/main/test — kopia.png" type="Texture" id=1]
 [ext_resource path="res://src/player/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/story_buttons/hause_button/hause_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/main/main.gd" type="Script" id=4]
 [ext_resource path="res://src/music_machine/music_machine.tscn" type="PackedScene" id=5]
-[ext_resource path="res://graphics/board/dirt.jpg" type="Texture" id=7]
 [ext_resource path="res://src/story_buttons/medium_button/medium_button.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/story_buttons/post_button/post_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/story_buttons/grandma_button/grandma_button.tscn" type="PackedScene" id=10]
@@ -89,10 +88,12 @@ anims/stat = SubResource( 2 )
 [node name="scenario" type="Node" parent="."]
 script = SubResource( 4 )
 
-[node name="Dirt" type="Sprite" parent="."]
-position = Vector2( 422, 312 )
-scale = Vector2( 2.7197, 2.39838 )
-texture = ExtResource( 7 )
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -3953.0
+margin_top = -2932.0
+margin_right = 5390.0
+margin_bottom = 4285.0
+color = Color( 0.335938, 0.296861, 0.248016, 1 )
 
 [node name="Test" type="Sprite" parent="."]
 position = Vector2( 570, 464 )
@@ -139,3 +140,9 @@ color = Color( 0, 0, 0, 1 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="MusicTween" type="Tween" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PoolVector2Array( -948, -1069, -964, 1853, 2111, 1511, 2109, -1058, -949, -650, -983, -1205, 2460, -1175, 2442, 1815, -1292, 2034, -1085, -1088 )
